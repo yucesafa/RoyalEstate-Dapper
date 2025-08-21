@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+@await Component.InvokeAsync("_OtherFeatureComponentPartial")
+
+@await Component.InvokeAsync("_RecentPropertiesComponentPartial")
+
+@await Component.InvokeAsync("_Last4AdvertComponentPartial")
+
+@await Component.InvokeAsync("_UIStatisticsComponentPartial")
+
+@await Component.InvokeAsync("_TestimonialComponentPartial")

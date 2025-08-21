@@ -1,0 +1,61 @@
+﻿@model List<DapperProject.Dtos.LocationDtos.ResultLocationDto>
+
+<section class="ftco-search">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 search-wrap">
+                <h2 class="heading h5 d-flex align-items-center pr-4"><span class="ion-ios-search mr-3"></span> Search Property</h2>
+                <form asp-area="" asp-controller="Advert" asp-action="GetListSearchAdvertList" class="search-property">
+
+                    <div class="row">
+                        <div class="col-md align-items-end">
+                            <div class="form-group">
+                                <label for="#">Lokasyon ile</label>
+                                <div class="form-field">
+                                    <div class="select-wrap">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                        <select name="location" id="LocationId" class="form-control">
+                                            <option value="">Lokasyon Seçiniz</option>
+                                            @foreach (var item in Model)
+                                            {
+                                                <option value="@item.LocationId" style="color:black">@item.LocationName</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md align-items-end">
+                            <div class="form-group">
+                                <label for="#">Konut Tipi </label>
+                                <div class="form-field">
+                                    <div class="select-wrap">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                        <select name="category" id="CategoryId" class="form-control">
+                                            <option value="">Konut Tipi Seçiniz</option>
+                                            @foreach (var item in ViewBag.category)
+                                            {
+                                                <option value="@item.CategoryId" style="color:black">@item.CategoryName</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md align-self-end">
+                            <div class="form-group">
+                                <div class="form-field">
+                                    <input type="submit" value="Ara" class="form-control btn btn-primary">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

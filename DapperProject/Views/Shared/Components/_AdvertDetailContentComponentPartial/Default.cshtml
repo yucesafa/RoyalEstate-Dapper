@@ -1,0 +1,58 @@
+﻿@model DapperProject.Dtos.AdvertDtos.GetByIdAdvertDetailDto
+<div class="hero-wrap" style="background-image: url('/royalestate-master/images/bg_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="/Default/Index/">Ana Sayfa</a></span><span></span></p>
+                <h1 class="mb-3 bread">@Model.Title</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12 ftco-animate">
+                        <div class="single-slider owl-carousel">
+                            <div class="item">
+                                <div class="properties-img" style="background-image: url(@Model.ImageUrl1);"></div>
+                            </div>
+                            <div class="item">
+                                <div class="properties-img" style="background-image: url(@Model.ImageUrl2);"></div>
+                            </div>
+                            <div class="item">
+                                <div class="properties-img" style="background-image: url(@Model.ImageUrl3);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 Properties-single mt-4 mb-5 ftco-animate">
+                        <h2>@Model.Title</h2>
+                        <p class="rate mb-4">
+                            <span class="loc"><a href="#"><i class="icon-map"></i>@Model.LocationName</a></span>
+                        </p>
+                        <p>@Model.Description</p>
+                        <div class="d-md-flex mt-5 mb-5">
+                            <ul>
+                                <li><span>Kategori: </span> @Model.CategoryName</li>
+                                <li><span>Metre Kare: </span>@Model.M2 m2</li>
+                                <li><span>Oda Sayısı: </span> @Model.RoomCount</li>
+                                <li><span>Banyo Sayısı: </span> @Model.BathroomCount</li>
+                                <li><span>Fiyat: </span> $@Model.Price</li>
+                            </ul>
+                        </div>
+                        <p>@Model.Description</p>
+                    </div>
+                    <div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
+                        <h3 class="mb-4">Video Tanıtımı</h3>
+                        <div class="block-16">
+                            <figure>
+                                <img src="@Model.ImageUrl1" alt="Image placeholder" class="img-fluid">
+                                <a href="@Model.VideoEmbed" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+                            </figure>
+                        </div>
+                    </div>
